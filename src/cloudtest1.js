@@ -58,16 +58,16 @@ function clouds1(size, doubleSide, color, uniforms, planet, shape, orthoCam){
 
 function backgroundClouds(size, color){
     const uniforms = {
-        cloudscale: {type: "f", value: randomBtw(.05,0.15)},
+        cloudscale: {type: "f", value: 0.5},
         speed: {type: "f", value: 0.008},
         clouddark: {type: "f", value: .002},
         cloudlight: {type: "f", value: 0.08},
-        cloudcover: {type: "f", value: 0},
-        skytint: {type: "f", value: 0.0}
+        cloudcover: {type: "f", value: 0.1},
+        skytint: {type: "f", value: 0.}
      }
     const resolution = new THREE.Vector3(window.innerWidth, window.innerHeight, window.devicePixelRatio)
 
-    let geometry = new THREE.SphereGeometry( size, 64, 64 );
+    let geometry = new THREE.SphereGeometry( 25, 32, 32 );
     const colorC = [0,0,0]
     const plane1Material = new THREE.ShaderMaterial({
         uniforms: {

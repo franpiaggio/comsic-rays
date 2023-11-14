@@ -22,7 +22,7 @@ function getStars(time, pixelratio, c){
         positions[i3 + 2] = v.z;
 
         let currColor;
-        if(fxrand() > 0.85){
+        if(Math.random() > 0.85){
             const rColors = randomFromList(pallete);
             currColor = new THREE.Color(randomFromList(rColors));
         }else{
@@ -34,7 +34,7 @@ function getStars(time, pixelratio, c){
         colorsStars[i3 + 2] = currColor.b;
 
         scales[i] = randomBtw(0.1,3);
-        showRays[i] = fxrand();
+        showRays[i] = Math.random();
         raysMult[i] = randomBtw(0.1,5);
     }
 

@@ -22,11 +22,11 @@ const shapes = [
         name: "Sphere",
         morph: true
     },
-    {
-        id: 2,
-        name: "TorusKnot",
-        morph: false
-    },
+    // {
+    //     id: 2,
+    //     name: "TorusKnot",
+    //     morph: false
+    // },
     {
         id: 3,
         name: "Octahedron",
@@ -39,17 +39,8 @@ const shapes = [
     }
 ]
 function getShape(){
-    if(fxrand() > 0.5){
-        return {
-            id: 2,
-            name: "TorusKnot",
-            morph: false
-        }
-    }
     return randomFromList(shuffle(shapes));
 }
-function getCamera(){
-    return null
-}
 
-export { getShape, getCamera }
+
+export { getShape }

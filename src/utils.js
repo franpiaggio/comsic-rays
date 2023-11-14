@@ -6,15 +6,15 @@ function mapRange(value, a, b, c, d) {
 }
   
 function randomBtw(a,b){
-    return mapRange(fxrand(),0,1,a,b)
+    return mapRange(Math.random(),0,1,a,b)
 }
 
 function randomFromList(items) {
-    return items[Math.floor(fxrand() * items.length)];
+    return items[Math.floor(Math.random() * items.length)];
 }
 const pickAndRemove = (array) => {
     while(array.length){
-       const random = Math.floor(fxrand() * array.length);
+       const random = Math.floor(Math.random() * array.length);
        return array.splice(random, 1)[0];
     }
 };
@@ -25,7 +25,7 @@ function shuffle(array) {
     while (currentIndex != 0) {
   
       // Pick a remaining element.
-      randomIndex = Math.floor(fxrand() * currentIndex);
+      randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
   
       // And swap it with the current element.
